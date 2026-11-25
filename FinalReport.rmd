@@ -78,13 +78,16 @@ From these results we can see that white people do indeed have a higher percenta
 ```{r}
 fisherXY(mydata$race,mydata$cappun,confL=0.05) 
 ```
-The fisherXY test shows that all races have a difference in favouring/not favouring capital punishment, as each one has a p value less than 0.05. They also each have different odds ratios.
+The fisherXY test shows that all races have a difference in favouring/not favouring capital punishment, as each one has a p value less than 0.05. So we can reject the null. They also each have different odds ratios.
 
 ## More data version
 
 
 # Discussion and Conclusion
 
+Original question: Is attitude toward capitol punishment (cappun) independent of race (race)?
+If not, then whose view differs from whom??
 
+Based on the fisherXY test which shows that each race has a differing relationship to favouring or not favouring capital punishment, we can reject the null that there is no difference between races and capital punishment. Each race has a difference relationship with these stats, with the following p values for the different races: 2.2e-16, 0.002607, and 0.001564. All of these are less than 0.05, which is why he can confidently reject the null and finish this crap up!!
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhaps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
