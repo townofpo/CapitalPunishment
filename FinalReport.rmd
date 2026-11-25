@@ -29,7 +29,7 @@ Data from GSS 2016.
 
 $H_0$ : Yes attitude towards capitol punishment is independent of race. In other words there's no difference... (-_-)
 
-$H_A$ : 
+$H_A$ : No, attitude towards capitol punishment is NOT independent of race!!! AKA there is a difference in views!
 
 # Methods
 
@@ -45,9 +45,13 @@ Lets use the freaking Cat~Cat file for this since race and capital punishment ar
 
 ### Graphical Descriptive Results
 
+```{r}
+barchartGC(~race + cappun,data=mydata)
+barchartGC(~race + cappun,data=mydata, type="percent")
+
+```
+These graphs suggest that white people have a higher percentage of being in favour of capital punishment, being the highest percentage out of the three race options, followed by "other" and lastly black people. This is from the second graph, assuming the first one factors in the population of said races.
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
-
-
 
 ## Now with The Most data (fewer variables gives more data points)
 
@@ -57,18 +61,21 @@ Lets use the freaking Cat~Cat file for this since race and capital punishment ar
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
-
-
+```{r}
+table1 <- xtabs(~race + cappun, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+From these results we can see that white people do indeed have a higher percentage of favouring capital punishment when compared with the other races. Roughly 65% of white people favour capital punishment, whereas roughly 43% of black people favour it, and finally roughly 55% of people in the "other" race category favour it. Overall these results suggest that white people have the smallest percentage of being opposed to it.
 
 ## Now with More data
-
 
 
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
-`
+
 
 
 ## More data version
